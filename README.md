@@ -1,6 +1,10 @@
 # Better Progression
 
-This mod is a version of [arishackstv's cubemod](https://github.com/arishackstv/cubemod) - *"A Cube World mod adding item/enemy scaling, useful artifact stats, modified item spawn rates, and pvp."* This version of the mod is ported to work with [ChrisMiuchiz's Cube World Mod Launcher](https://github.com/ChrisMiuchiz/Cube-World-Mod-Launcher) and [CWSDK](https://github.com/ChrisMiuchiz/CWSDK) in order to improve usability. **This mod is currently up to date with version 1.02 of arishackstv's cubemod.**
+This mod is a version of [arishackstv's cubemod](https://github.com/arishackstv/cubemod) - *"A Cube World mod adding item/enemy scaling, useful artifact stats, modified item spawn rates, and pvp."* 
+
+This version of the mod is ported to work with [ChrisMiuchiz's Cube World Mod Launcher](https://github.com/ChrisMiuchiz/Cube-World-Mod-Launcher) and [CWSDK](https://github.com/ChrisMiuchiz/CWSDK) in order to improve usability. 
+
+**This mod is currently up to date with version 1.02 of arishackstv's cubemod.**
 
 ## Installation & Setup
 - Download [the latest CubeModLoader.fip](https://github.com/ChrisMiuchiz/Cube-World-Mod-Launcher/releases) and place it in your game folder ("steamapps/common/Cube World", where cubeworld.exe is located).
