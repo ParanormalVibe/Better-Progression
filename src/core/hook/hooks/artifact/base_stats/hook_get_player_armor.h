@@ -1,7 +1,7 @@
 #pragma once
 
-#include <hook/hook.h>
-#include <game_structures.h>
+#include "../../../hook.h"
+#include "../../../../game_structures.h"
 
 class HookGetPlayerArmor : public Hook
 {
@@ -14,7 +14,6 @@ class HookGetPlayerArmor : public Hook
 
 		//Just nerf base armor a bit here
 		ret *= 0.9;
-
 		return ret + ((Player*)entity)->GetIncreasedArtifactStats(ARMOR);
 	}
 

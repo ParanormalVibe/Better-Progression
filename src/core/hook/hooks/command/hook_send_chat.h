@@ -1,6 +1,6 @@
 #pragma once
 
-#include <hook/hook.h>
+#include "../../hook.h"
 
 class ChatString
 {

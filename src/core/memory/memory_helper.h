@@ -5,7 +5,7 @@
 #include <sstream>
 #include <vector>
 #include <iostream>
-#include <main.h>
+#include "../main.h"
 
 #define CUBE_EXE_NAME "cubeworld.exe"
 

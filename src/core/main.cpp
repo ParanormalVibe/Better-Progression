@@ -1,30 +1,30 @@
-#include <main.h>
+#include "main.h"
 
 #include <fstream>
 
-#include <memory/memory_helper.h>
+#include "memory/memory_helper.h"
 
 //Hook stuff wheee
-#include <hook/hooks/item_generation/hook_create_weapon.h>
-#include <hook/hooks/item_generation/hook_create_armor.h>
-#include <hook/hooks/scaling/hook_get_item_modifier.h>
-#include <hook/hooks/scaling/hook_get_item_regen.h>
-#include <hook/hooks/scaling/hook_get_item_haste.h>
-#include <hook/hooks/scaling/hook_get_item_crit.h>
-#include <hook/hooks/pvp/hook_can_attack_entity.h>
-#include <hook/hooks/artifact/hook_set_artifact_stats.h>
-#include <hook/hooks/artifact/display/hook_concat_artifact_suffix.h>
-#include <hook/hooks/artifact/display/hook_round_artifact_thing.h>
-#include <hook/hooks/artifact/display/hook_artifact_display_roundf.h>
-#include <hook/hooks/artifact/base_stats/hook_get_hit_points.h>
-#include <hook/hooks/artifact/base_stats/hook_get_player_armor.h>
-#include <hook/hooks/artifact/base_stats/hook_get_attack_power.h>
-#include <hook/hooks/artifact/base_stats/hook_get_spell_power.h>
-#include <hook/hooks/artifact/base_stats/hook_get_player_haste.h>
-#include <hook/hooks/artifact/base_stats/hook_get_player_regeneration.h>
-#include <hook/hooks/artifact/base_stats/hook_get_player_resistance.h>
-#include <hook/hooks/artifact/base_stats/hook_get_player_crit.h>
-#include <hook/hooks/command/hook_send_chat.h>
+#include "hook/hooks/item_generation/hook_create_weapon.h"
+#include "hook/hooks/item_generation/hook_create_armor.h"
+#include "hook/hooks/scaling/hook_get_item_modifier.h"
+#include "hook/hooks/scaling/hook_get_item_regen.h"
+#include "hook/hooks/scaling/hook_get_item_haste.h"
+#include "hook/hooks/scaling/hook_get_item_crit.h"
+#include "hook/hooks/pvp/hook_can_attack_entity.h"
+#include "hook/hooks/artifact/hook_set_artifact_stats.h"
+#include "hook/hooks/artifact/display/hook_concat_artifact_suffix.h"
+#include "hook/hooks/artifact/display/hook_round_artifact_thing.h"
+#include "hook/hooks/artifact/display/hook_artifact_display_roundf.h"
+#include "hook/hooks/artifact/base_stats/hook_get_hit_points.h"
+#include "hook/hooks/artifact/base_stats/hook_get_player_armor.h"
+#include "hook/hooks/artifact/base_stats/hook_get_attack_power.h"
+#include "hook/hooks/artifact/base_stats/hook_get_spell_power.h"
+#include "hook/hooks/artifact/base_stats/hook_get_player_haste.h"
+#include "hook/hooks/artifact/base_stats/hook_get_player_regeneration.h"
+#include "hook/hooks/artifact/base_stats/hook_get_player_resistance.h"
+#include "hook/hooks/artifact/base_stats/hook_get_player_crit.h"
+#include "hook/hooks/command/hook_send_chat.h"
 
 Main &Main::GetInstance()
 {
@@ -111,7 +111,7 @@ void Main::PatchRegionLock()
 {
 	//Might take a second
 	uint64_t special_item_display;
-	while (!(special_item_display = MemoryHelper::FindPattern("08 ? ? ? ? 39 01 0F 85"))) Sleep(250);
+	while (!(special_item_display = MemoryHelper::FindPattern("08 ? ? ? ? 39 01 0F 85")));
 
 	auto special_item_use = MemoryHelper::FindPattern("39 01 0F 85 ? ? ? ? 48 FF");
 	auto equipment_lock = MemoryHelper::FindPattern("41 39 00 75 ? 48 FF C1");

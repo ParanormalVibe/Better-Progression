@@ -1,7 +1,7 @@
 #pragma once
 
-#include <hook/hook.h>
-#include <game_structures.h>
+#include "../../hook.h"
+#include "../../../game_structures.h"
 
 class HookSetArtifactStats : public Hook
 {
@@ -12,7 +12,6 @@ class HookSetArtifactStats : public Hook
 		auto ret = hook->Trampoline(SetArtifactStats)(player);
 
 		Main::GetInstance().GetLocalPlayer()->UpdateNetworkedArtifactStats();
-
 		return ret;
 	}
 

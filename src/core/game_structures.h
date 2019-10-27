@@ -4,7 +4,7 @@
 #include <sstream>
 #include <random>
 #include <functional>
-#include <main.h>
+#include "main.h"
 #include <climits>
 
 struct RegionCoordinates

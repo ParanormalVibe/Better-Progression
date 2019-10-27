@@ -1,7 +1,7 @@
 #pragma once
 
-#include <hook/hook.h>
-#include <game_structures.h>
+#include "../../hook.h"
+#include "../../../game_structures.h"
 
 class HookIsEnemy : public Hook
 {
@@ -13,7 +13,6 @@ class HookIsEnemy : public Hook
 		{
 			return Main::GetInstance().CanPvP();
 		}
-
 		return hook->Trampoline(IsEntityEnemy)(entity_1, entity_2);
 	}
 

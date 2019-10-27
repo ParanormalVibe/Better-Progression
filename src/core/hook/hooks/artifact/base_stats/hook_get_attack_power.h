@@ -1,7 +1,7 @@
 #pragma once
 
-#include <hook/hook.h>
-#include <game_structures.h>
+#include "../../../hook.h"
+#include "../../../../game_structures.h"
 
 class HookGetAttackPower : public Hook
 {
@@ -21,7 +21,6 @@ class HookGetAttackPower : public Hook
 
 		//Patch base value back
 		MemoryHelper::PatchMemory<float>(base_damage, 5.f);
-
 		return ret;
 	}
 

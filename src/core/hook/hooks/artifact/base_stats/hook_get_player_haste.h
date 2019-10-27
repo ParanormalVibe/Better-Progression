@@ -1,7 +1,7 @@
 #pragma once
 
-#include <hook/hook.h>
-#include <game_structures.h>
+#include "../../../hook.h"
+#include "../../../../game_structures.h"
 
 class HookGetPlayerHaste : public Hook
 {
@@ -11,7 +11,6 @@ class HookGetPlayerHaste : public Hook
 	{
 		auto ret = hook->Trampoline(GetHaste)(entity);
 		if (entity->GetEntityType() != PLAYER) return ret;
-
 		return ret + ((Player*)entity)->GetIncreasedArtifactStats(HASTE) / 100.f;
 	}
 

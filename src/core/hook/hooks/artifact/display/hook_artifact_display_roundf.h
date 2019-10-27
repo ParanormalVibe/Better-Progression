@@ -1,7 +1,7 @@
 #pragma once
 
-#include <hook/hook.h>
-#include <game_structures.h>
+#include "../../../hook.h"
+#include "../../../../game_structures.h"
 #include "hook_concat_artifact_suffix.h"
 
 class Hookroundf : public Hook

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <hook/hook.h>
-#include <game_structures.h>
+#include "../../hook.h"
+#include "../../../game_structures.h"
 
 class HookCreateArmor : public Hook
 {
@@ -14,7 +14,6 @@ class HookCreateArmor : public Hook
 		//Check the return address to avoid lowering rates for shop items
 		auto create_shop_offer_armor_address = (void*)(MemoryHelper::GetCubeBase() + 0x2AC7F3);
 		item->ModifyRarity(__builtin_return_address(0) == create_shop_offer_armor_address);
-
 		return item;
 	}
 

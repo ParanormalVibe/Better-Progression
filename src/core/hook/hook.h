@@ -4,10 +4,10 @@
 
 extern "C"
 {
-#include <xed/include/xed-interface.h>
+#include "../../../lib/xed/include/xed-interface.h"
 }
 
-#include <memory/memory_helper.h>
+#include "../memory/memory_helper.h"
 
 #define MAX_INSTRUCTION_LENGTH 15
 #define JMP_LENGTH 6

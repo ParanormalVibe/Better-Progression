@@ -1,7 +1,7 @@
 #pragma once
 
-#include <hook/hook.h>
-#include <game_structures.h>
+#include "../../../hook.h"
+#include "../../../../game_structures.h"
 
 class HookGetPlayerRegeneration : public Hook
 {
